@@ -1,1 +1,106 @@
- 
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <meta name="theme-color" content="#05070a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="FRIDAY">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+
+    <title>FRIDAY</title>
+</head>
+
+<body>
+
+<div class="app">
+
+    <header>
+        <div>
+            <div class="stark">STARK INDUSTRIES</div>
+            <h1>FRIDAY</h1>
+        </div>
+
+        <div class="status">
+            <span></span> ONLINE
+        </div>
+    </header>
+
+    <section class="reactor">
+
+        <div class="orb">
+            <div class="core"></div>
+        </div>
+
+        <div id="systemStatus">
+            SYSTEM READY
+        </div>
+
+    </section>
+
+    <section id="chat" class="chat">
+
+        <div class="message friday">
+            <strong>FRIDAY</strong>
+            <p>
+                Bonjour. Tous les systèmes sont opérationnels.
+                Comment puis-je vous assister ?
+            </p>
+        </div>
+
+    </section>
+
+    <div class="quickButtons">
+
+        <button onclick="command('status')">
+            STATUS
+        </button>
+
+        <button onclick="command('heure')">
+            HEURE
+        </button>
+
+        <button onclick="command('batterie')">
+            BATTERIE
+        </button>
+
+        <button onclick="command('diagnostic')">
+            DIAGNOSTIC
+        </button>
+
+    </div>
+
+    <form id="commandForm">
+
+        <button id="micro" type="button">
+            🎙
+        </button>
+
+        <input
+            id="commandInput"
+            type="text"
+            placeholder="Parlez à FRIDAY..."
+            autocomplete="off"
+        >
+
+        <button id="send" type="submit">
+            ➤
+        </button>
+
+    </form>
+
+    <div class="help">
+        Commandes : status · heure · date · batterie · diagnostic · aide
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
